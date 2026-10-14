@@ -1,0 +1,1 @@
+{ "name": "improve-prompt", "version": "0.1.0", "description": "Button and /improve: rewrites your prompt using the session's context", "author": { "name": "Walther" }, "license": "MIT", "types": "./types/index.d.ts" }

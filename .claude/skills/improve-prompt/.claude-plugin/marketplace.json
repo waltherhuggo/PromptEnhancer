@@ -1,0 +1,6 @@
+{
+  "name": "improve-prompt",
+  "description": "Rewrites your Claude Code prompt using the session's context before you send it",
+  "owner": { "name": "Walther" },
+  "plugins": [{ "name": "improve-prompt", "source": "./" }]
+}
