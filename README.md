@@ -24,7 +24,7 @@ Mods are installed with Claude Code's `plugin` commands, so you'll see "plugin" 
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install improve-prompt --marketplace <owner>/improve-prompt
+/plugin install improve-prompt --marketplace waltherhuggo/PromptEnhancer
 ```
 
 Answer `y` to add the marketplace, then press Enter to pick the user scope.
@@ -32,12 +32,14 @@ Answer `y` to add the marketplace, then press Enter to pick the user scope.
 From a shell:
 
 ```
-claude plugin install improve-prompt --marketplace <owner>/improve-prompt
+claude plugin install improve-prompt --marketplace waltherhuggo/PromptEnhancer
 ```
 
-In the desktop app, where `/plugin` does not run: click **+** next to the prompt box, then **Plugins**, then **Add marketplace** with `<owner>/improve-prompt`, then **Add plugin**.
+In the VS Code extension, where `/plugin` does not run, use the shell command above in a terminal.
 
-Prefer not to install it? Clone this repo into your project's `.claude/skills/improve-prompt/` (or `~/.claude/skills/improve-prompt/` to use it in every project). Claude Code loads it from there automatically.
+In the desktop app, where `/plugin` does not run either: click **+** next to the prompt box, then **Plugins**, then **Add marketplace** with `waltherhuggo/PromptEnhancer`, then **Add plugin**.
+
+Prefer not to install it? Copy this repo's [`.claude/skills/improve-prompt/`](.claude/skills/improve-prompt) folder into your project's `.claude/skills/` (or `~/.claude/skills/` to use it in every project). Claude Code loads it from there automatically.
 
 ## Usage
 
@@ -59,17 +61,17 @@ The mod forks the current conversation, so the model sees the same context you d
 
 This mod was created inside Claude Code. Open the ✨ icon in the sidebar and describe the mod you want:
 
-![The ✨ icon in the Claude Code sidebar, where mods are created](assets/print.png)
+![The ✨ icon in the Claude Code sidebar, where mods are created](Print.png)
 
 To check your changes:
 
 ```
 claude plugin validate .
-claude plugin test .
+claude plugin test .claude/skills/improve-prompt
 ```
 
-Run it from a folder with `claude --plugin-dir <path-to-this-folder>`.
+In this repo the mod loads automatically from `.claude/skills/improve-prompt/`.
 
 ## License
 
-MIT
+[MIT](LICENSE)
