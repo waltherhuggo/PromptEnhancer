@@ -1,0 +1,29 @@
+{
+  "name": "improve-prompt",
+  "displayName": "Improve prompt",
+  "description": "Claude Code sidebar button: /improve rewrites your prompt using the context of the last session",
+  "version": "0.1.0",
+  "publisher": "axion",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/waltherhuggo/PromptEnhancer" },
+  "engines": { "vscode": "^1.80.0" },
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      { "command": "improvePrompt.run", "title": "Improve prompt", "category": "Claude", "icon": "$(sparkle)" }
+    ],
+    "viewsContainers": {
+      "activitybar": [{ "id": "claudeButtons", "title": "Claude — buttons", "icon": "icon.svg" }]
+    },
+    "views": {
+      "claudeButtons": [{ "id": "claudeButtons.view", "name": "Buttons" }]
+    },
+    "viewsWelcome": [
+      {
+        "view": "claudeButtons.view",
+        "contents": "[✨ Improve prompt](command:improvePrompt.run)\nRewrites the selected text (or the clipboard's) with the context of your last Claude session and copies the result. Paste it into the chat with Ctrl+V."
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-# improve-prompt
+p# improve-prompt
 
 A Claude Code mod that rewrites your prompt before you send it, using what the session already knows: the conversation so far, your `CLAUDE.md`, and the project's git status.
 
@@ -52,6 +52,12 @@ Prefer not to install it? Copy this repo's [`.claude/skills/improve-prompt/`](.c
 ```
 
 Run `/improve` with no text and it improves whatever is already in the prompt box.
+
+**VS Code sidebar (optional):** the [`vscode/`](vscode) folder holds a small extension that adds a ✨ **Improve prompt** button to the activity bar. It rewrites the selected text (or your clipboard) with the context of your last Claude session and copies the result, so you can paste it into the chat with Ctrl+V. It needs the mod installed. To install the extension:
+
+```
+code --install-extension vscode/improve-prompt.vsix
+```
 
 ## How it works
 
